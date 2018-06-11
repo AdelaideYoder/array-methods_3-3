@@ -26,6 +26,11 @@
 
 //---------------------------------ARRAY METHODS--------------------------------------------------
 //--------------------------------FIRST EXERCISE--------------------------------------------------
+// /*
+//     Use the forEach method to add the name of each planet
+//     to a section element in your HTML with an id of "planets".
+//     Use string templates to construct the DOM elements.
+// */
 
 const planets = ["mercury", "venus", "earth", "mars", "jupiter", "saturn", "uranus", "neptune"]
 const planetEl = document.getElementById("planets")
@@ -35,18 +40,11 @@ const planetsList = function (planet) {
     planetsListName.innerHTML = planet
     planetEl.appendChild(planetsListName)
     console.log(planetsListName)
-    
-
 }
 
-planets.forEach(planetsList)
-// /*
-//     Use the forEach method to add the name of each planet
-//     to a section element in your HTML with an id of "planets".
-//     Use string templates to construct the DOM elements.
-// */
+// planets.forEach(planetsList)
 
-
+//--------------------------------SECOND EXERCISE--------------------------------------------------
 // /*
 //     Use the map method to create a new array where the
 //     first letter of each planet is capitalized. Use the
@@ -54,6 +52,19 @@ planets.forEach(planetsList)
 
 //     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 // */
+
+const capPlanets = planets.map(function (planet) {
+    // return planet.toUpperCase(1)+ planet.slice(1);
+    return planet.charAt(0).toUpperCase() + planet.slice(1);
+})
+
+console.log(planets)
+console.log(capPlanets)
+
+capPlanets.forEach(planetsList)
+
+
+
 
 
 // /*
